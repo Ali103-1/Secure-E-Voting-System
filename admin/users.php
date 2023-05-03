@@ -136,7 +136,12 @@
                           <td>
                             <?php
 
-
+                            if ($user['type'] == 0)
+                            {
+                              ?>
+                              <span class="type e-ty" style="background:grey !important">visitor</span>
+                              <?php
+                            }
                               if ($user['type'] == 1)
                               {
                                 ?>

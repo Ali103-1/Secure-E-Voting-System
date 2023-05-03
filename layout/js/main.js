@@ -2,7 +2,21 @@ $(document).ready(function(){
 
 // هنا ملفات جافا سكريبت
 
+$('#a-btn-option').click(function(){
 
+  $.ajax({
+    url: 'register-ajax.php',
+    method : 'POST',
+    data:  $('#form-info').serialize(),
+    success: function(data)
+    {
+      $('.err-msg').html(data);
+    }
+  });
+
+
+
+});
   $(document).on('click', '.mprekt', function() {
 
       $(".lsitte").animate({"right":"0"}, 500);
@@ -86,7 +100,7 @@ $('#close').click(function(){
     success: function(data)
     {
         $('#openpop').fadeIn();
-
+  
       // $('.showcontent').html(data);
     }
   });

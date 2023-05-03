@@ -101,7 +101,7 @@ a:hover
 }
 .header a
 {
- font-size: 19px;
+ font-size: 15px;
  color: rgb(74, 74, 74);
  padding: 0;
  margin: 0;
@@ -1239,7 +1239,8 @@ footer li a
 }
 table
 {
-margin: 20px 0
+margin: 20px 0;
+text-align: left;
 }
 table tr
 {
@@ -3595,12 +3596,19 @@ text-align: right;
 }
 input,textarea
 {
- height: 40px !important;
- border:unset !important;
- /*! border-bottom: 1px solid  var(--mainColor) !important; */
- background: #f1f1f1 !important;
- border-radius: 0 !important;
- margin-bottom: 20px
+      font-size: 14px;
+      background-color: white;
+      border: 1px solod rgba(0,0,0,.1);
+      border-radius: 0;
+      max-height: 150px;
+      border-radius: 15px;
+      height: 45px !important;
+      color: rgba(0,0,0,.7);
+      width: 100%;
+      padding: 10px;
+      box-shadow: none !important;
+      border: 1px solid rgba(0,0,0,.1);
+      margin: 10px 0;
 }
 textarea
 {
@@ -5588,4 +5596,180 @@ background: #7b7b7b;
 .dsrre img
 {
   border-radius: 50% !important
+}
+.account-page
+{
+  text-align: center
+}
+.account-page .btn
+{
+  text-align: center !important;
+}
+/* Page Header */
+.page-header {
+background-color: var(--mainColor);
+margin: 0 0 35px 0;
+padding: 30px 0;
+position: relative;
+text-align: right;
+z-index: -899879897;
+}
+
+.page-header .breadcrumb {
+background: none;
+margin: 0;
+padding: 0;
+position: relative;
+z-index: 1;
+}
+
+.page-header .breadcrumb > li {
+display: inline-block;
+font-size: 0.8em;
+text-transform: uppercase;
+text-shadow: none;
+}
+
+.page-header .breadcrumb > li + li:before {
+color: inherit;
+opacity: 0.5;
+font-family: 'Font Awesome 5 Free';
+font-weight: 900;
+content: "\f104";
+padding: 0 7px 0 5px;
+}
+
+.page-header .breadcrumb.breadcrumb-block {
+background: #212529;
+display: inline-block !important;
+padding: 7.2px 19.2px;
+padding: .45rem 1.2rem;
+border-radius: 4px;
+box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.page-header .breadcrumb.breadcrumb-light {
+color: #FFF;
+}
+
+.page-header .breadcrumb.breadcrumb-light a {
+color: #FFF;
+}
+
+.page-header .breadcrumb.breadcrumb-light .active {
+opacity: 0.7;
+}
+
+.page-header h1 {
+color: #fff;
+display: inline-block;
+font-size: 30px;
+line-height: 1;
+margin: 0;
+padding: 0;
+font-weight: 400;
+position: relative;
+top: 1px;
+}
+
+.page-header .sub-title {
+display: block;
+font-size: 1.2em;
+font-weight: 300;
+margin: 0;
+opacity: 0.8;
+color: #fff;
+}
+
+.page-header .page-header-extra-button {
+position: absolute;
+width: 100%;
+bottom: 50px;
+left: 0;
+right: 0;
+z-index: 5;
+}
+
+.page-header.page-header-sm {
+padding: 30px 0;
+}
+
+.page-header.page-header-sm h1 {
+font-size: 22px;
+}
+
+.page-header.page-header-lg {
+padding: 50px 0;
+}
+
+.page-header.page-header-lg h1 {
+font-size: 40px;
+}
+
+.page-header.page-header-classic:after {
+content: '';
+width: 100%;
+height: 5px;
+background: rgba(255, 255, 255, 0.8);
+position: absolute;
+bottom: 0;
+left: 0;
+}
+
+.page-header.page-header-classic .page-header-title-border {
+width: 0;
+height: 5px;
+position: absolute;
+bottom: 0;
+background: transparent;
+z-index: 1;
+}
+
+.page-header.page-header-modern h1 {
+font-size: 28px;
+text-align: left !important;
+display: block;
+}
+
+.page-header.page-header-modern.page-header-sm h1 {
+font-size: 22px;
+}
+
+.page-header.page-header-modern.page-header-md {
+padding: 50px 0;
+}
+
+.page-header.page-header-modern.page-header-lg {
+padding: 65px 0;
+}
+
+.page-header.page-header-modern.page-header-lg h1 {
+font-size: 32px;
+}
+
+.page-header.page-header-modern.page-header-background {
+padding: 130px 0;
+background-size: cover;
+}
+
+.page-header.page-header-modern.page-header-background.page-header-background-pattern {
+background-size: auto;
+background-repeat: repeat;
+background-attachment: fixed;
+}
+
+.page-header.page-header-modern.page-header-background.page-header-background-sm {
+padding: 50px 0;
+}
+
+.page-header.page-header-modern.page-header-background.page-header-background-md {
+padding: 150px 0;
+}
+
+.page-header.page-header-modern.page-header-background.page-header-background-lg {
+padding: 250px 0;
+}
+.page-header .row
+{
+/*! flex-direction: row-reverse */
 }

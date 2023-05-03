@@ -3,6 +3,9 @@ include './connect.php';
 $stmt = $conn->prepare("SELECT * FROM pages WHERE id = 1");
 $stmt->execute();
 $lg = $stmt->fetch();
+
+
+
  ?>
 
 
@@ -93,6 +96,25 @@ $lg = $stmt->fetch();
       <div class="collapse navbar-collapse" id="navbarNav">
 
         <ul class="navbar-nav mr-auto merelgj">
+          <?php
+            if (isset($_SESSION['clientid']))
+            {
+?>
+<li class="nav-item">
+  <a class="nav-link" href="logout.php">logout</a>
+</li>
+<?php
+            }else {
+              ?>
+              <li class="nav-item">
+                <a class="nav-link" href="account.php?page=register">create account</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="account.php?page=login">login</a>
+              </li>
+              <?php
+            }
+           ?>
           <li class="nav-item">
             <a class="nav-link" href="webpage.php?page=faq">Faq's</a>
           </li>
@@ -118,9 +140,23 @@ $lg = $stmt->fetch();
       <ul class="navbar-nav ml-auto act">
 
 
-        <li>
-          <a href="/elec/admin" target="_blank"> admin</a>
-        </li>
+      <?php
+        if (isset($_SESSION['clientid']))
+        {
+
+          ?>
+          <li>
+            <a href="webpage.php?page=myprofile&id=<?php echo $_SESSION['clientid'] ?>" > account</a>
+          </li>
+          <?php
+        }else {
+          ?>
+          <li>
+            <a href="/elec/admin" target="_blank"> admin</a>
+          </li>
+          <?php
+        }
+       ?>
 
 
 

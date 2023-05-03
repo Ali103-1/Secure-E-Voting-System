@@ -1,12 +1,12 @@
 <?php
 session_start();
 
-  include 'init.php';
+  include 'connect.php';
 
 // صفحة خاصة بادخال التصويت
 
-// هنا خاصية تقوم بجلب بيانات الحاسوب الذي قام بالتتصويت ويتم تسجيل التصويت عبر بيانات الحاسوب
-  $user = $_SERVER['HTTP_USER_AGENT'];
+// هنا يتم ادخال بيانات المصوت من خلال لاي دي الخاص به
+  $user = $_SESSION['clientid'];
 
 
   $election = $_POST['election'];

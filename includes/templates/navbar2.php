@@ -25,7 +25,7 @@ $lg = $stmt->fetch();
 
         <ul class="navbar-nav mr-auto merelgj">
           <li class="nav-item">
-            <a class="nav-link" href="webpage.php?page=faq">Faq's</a>
+            <a class="nav-link" href="webpage.php?page=faq">FAQs</a>
           </li>
           <li class="nav-item">
             <a class="nav-link"  href="#contactuspage">contact us</a>

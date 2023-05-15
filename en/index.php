@@ -46,7 +46,7 @@ $lg = $stmt->fetch();
 
           </div>
         </div>
-
+        
       </div>
     </div>
   </section>
@@ -66,8 +66,8 @@ $lg = $stmt->fetch();
                    <h1>Secure system
                    </h1>
 
-      <p><?php echo $lg['aboutus'] ?></p>
-
+      
+      
 
             </div>
           </div>
@@ -93,7 +93,7 @@ $lg = $stmt->fetch();
             <div class="col-md-12">
               <div class="content-header">
                 <h3>Elections</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed t amet, consectetur adipisicing elit, sed.</p>
+                <p>Here are the registered Elections.</p>
 
               </div>
             </div>
@@ -146,8 +146,8 @@ $lg = $stmt->fetch();
             <div class="row">
               <div class="col-md-12">
                 <div class="content-header">
-                  <h3>Condidates</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed t amet, consectetur adipisicing elit, sed.</p>
+                  <h3>Candidates</h3>
+                  <p>Candidates that are in an active Election.</p>
 
                 </div>
               </div>
@@ -202,7 +202,7 @@ $lg = $stmt->fetch();
                 <div class="col-md-12">
                   <div class="content-header">
                     <h3>Result</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed t amet, consectetur adipisicing elit, sed.</p>
+                    <p>Elections Results</p>
                   </div>
                 </div>
                             <?php

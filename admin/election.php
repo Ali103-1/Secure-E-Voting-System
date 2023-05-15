@@ -268,14 +268,11 @@
 
                     </div>
                       <div class="row">
-                        <div class="col-6">
+                        <div class="col-12">
                           <label for="username">election name</label>
                           <input type="text" name="name" id="username" placeholder="" class="form-control">
                         </div>
-                        <div class="col-6">
-                          <label for="username">election image</label>
-                          <input type="file" name="image" id="username" placeholder="" class="form-control">
-                        </div>
+
                         <div class="col-12">
                           <label for="username">election description</label>
                           <textarea name="descr" class="form-control"></textarea>
@@ -337,29 +334,13 @@
         $id = $_SESSION['id'];
 
 
-        $imageName = $_FILES['image']['name'];
-        $imageSize = $_FILES['image']['size'];
-        $imageTmp = $_FILES['image']['tmp_name'];
-        $imageType = $_FILES['image']['type'];
 
 
-        $imageAllowedExtension = array("jpeg", "jpg", "png");
-        $Infunc = explode('.', $imageName);
-        $imageExtension = strtolower(end($Infunc));
         $formErrors = array();
         if (empty($name))
         {
           $formErrors[] = 'name is required';
         }
-        if (empty($imageName))
-        {
-          $formErrors[] = "image is required";
-        }
-        if (!empty($imageName) && ! in_array($imageExtension, $imageAllowedExtension))
-        {
-          $formErrors[] = 'image extension is not allowed';
-        }
-
 
 
 
@@ -379,12 +360,10 @@
 
         if (empty($formErrors))
         {
-          $image = rand(0,100000) . '_' . $imageName;
-          move_uploaded_file($imageTmp, $images . '/' . $image);
-          $stmt = $conn->prepare("INSERT INTO election(name,image,descr, start_date,end_date,admin_id) VALUES(:zusername,:zimg,:zdec, :zpass, :zfname,:zad)");
+  
+          $stmt = $conn->prepare("INSERT INTO election(name,descr, start_date,end_date,admin_id) VALUES(:zusername,:zdec, :zpass, :zfname,:zad)");
           $stmt->execute(array(
             'zusername' => $name,
-            'zimg' => $image,
             'zdec' => $descr,
 
             'zpass' => $st,

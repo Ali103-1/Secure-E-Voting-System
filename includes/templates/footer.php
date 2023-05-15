@@ -51,8 +51,46 @@ $lg = $stmt->fetch();
    </div>
  </section>
 <!-- footer end -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.min.js"></script>
+
+<script src="http://zeptojs.com/zepto.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" ></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.min.js" ></script>
 
 
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+<script>
+    var element = document.getElementById('printpdfpage');
+var opt = {
+  margin:       0,
+  filename:     'election.pdf',
+  image:        { type: 'jpeg', quality: 1 },
+
+  html2canvas:  {  scale: 4,dpi: 300,scrollY: 0,bottom:0,top:0,left:0,right:0, letterRendering: true},
+      pagebreak: {before: '.newPage', after: '.avoidThisRow'},
+  jsPDF:        { unit: 'mm', format: 'letter', orientation: 'portrait' }
+};
+
+// New Promise-based usage:
+
+// // Old monolithic-style usage:
+$(window).ready(function(){
+  html2pdf().set(opt).from(element).save();
+
+});
+
+// html2pdf(element, opt);
+</script>
 
 <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>

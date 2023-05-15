@@ -349,7 +349,7 @@ ob_start();
                                               $stmt->execute(array($winner));
                                               $dat =$stmt->fetch();
                         ?>
-                    <h4 style="color:green;text-align:left">Winner is :<?php echo $dat['condidate_name'] ?> with <?php echo $maxval ?> votes</h4>
+                    <h4 style="color:green;text-align:left">Winner is :<?php echo $dat['condidate_name'] ?> with <?php echo $maxval ?> votes  <br> <a href="webpage.php?page=print&id=<?php echo $id ?>" style="background:var(--mainColor);color:white;padding:8px 20px">List of voters</a> </h4>
                         <?php
                     }else {
                       ?>
@@ -515,6 +515,138 @@ ob_start();
 
           <?php
 
+
+        include $tpl . 'footer.php';
+      }
+      elseif ($page == 'print') {
+        $noNavbar = '';
+
+        $pageTitle = "print data";
+        include 'init.php';
+
+
+
+        $id = isset($_GET['id']) && is_numeric($_GET['id']) ? intval($_GET['id']) : header('location: anys.php');
+        $stmt = $conn->prepare("SELECT * FROM vote WHERE election = ? ");
+        $stmt->execute(array($id));
+        $data = $stmt->rowCount();
+        $users = $stmt->fetchAll();
+        if ($data > 0)
+        {
+
+
+            ?>
+
+            <?php
+
+             ?>
+
+
+              <div class="printpdfpage mpprvrt" id="printpdfpage" style="background:white;position:relative">
+                <div class="ovbg">
+                </div>
+                <div class="container-fluid" style="max-width:100% !important;padding:0">
+                  <div class="row justify-content-end pppzrr"  >
+                    <div class="col-md-6" style="background-repeat: no-repeat;background-image:url(<?php echo $images ?>br.);background-size:contain;" >
+                      <div class="minf" style="min-height:auto;text-align:left">
+                        <img src="<?php echo $logo . $lg['logo'] ?>" alt="" style="width:40%;margin-top:20px">
+                      </div>
+                    </div>
+                    <div class="col-md-6" style="text-align:right">
+                      <img src="<?php echo $logo ?>lg.png" alt="" style="width:70%">
+
+                    </div>
+
+
+                  </div>
+                  <div class="row justify-content-center">
+                    <div class="col-md-12">
+                      <?php
+                      $stmt = $conn->prepare("SELECT * FROM election WHERE id = ? ");
+                      $stmt->execute(array($id));
+                      $dat = $stmt->fetch();
+                       ?>
+                      <h1 style="text-align:center;text-decoration:underline;margin-top:0px;color:black;line-height:1.6em">elecion: <?php echo $dat['name'] ?></h1>
+                      <table class="table" id="users-table" style="margin-top:60px">
+                        <thead>
+                          <tr>
+                            <th scope="col">id</th>
+                            <th scope="col">vote name</th>
+                            <th scope="col">condidate</th>
+
+                            <th scope="col">vote date</th>
+
+
+                          </tr>
+                        </thead>
+                        <tbody>
+
+                          <?php
+                          foreach($users as $user)
+                          {
+                            $stmt = $conn->prepare("SELECT * FROM users WHERE id = ? ");
+                            $stmt->execute(array($user['user']));
+                            $f = $stmt->fetch();
+                            $check = $stmt->rowCount();
+
+                            $stmt = $conn->prepare("SELECT * FROM condidate WHERE id = ? ");
+                            $stmt->execute(array($user['condidate']));
+                            $c = $stmt->fetch();
+                            ?>
+                            <tr>
+                              <td>
+                                <p><?php echo $user['id'] ?></p>
+                              </td>
+                              <td>
+                                <?php
+                                if ($check >0 )
+                                {
+                                  ?>
+  <p><?php echo $f['username'] ?></p>
+                                  <?php
+                                }else {
+                                  ?>
+  <p>empty name</p>
+                                  <?php
+                                }
+                                  ?>
+                              </td>
+                              <td>
+                                <p><?php echo $c['condidate_name'] ?></p>
+                              </td>
+                              <td>
+                                <p><?php echo $user['created'] ?></p>
+                              </td>
+
+                            </tr>
+                            <tr>
+
+                            <?php
+                          }
+                           ?>
+
+
+
+                        </tbody>
+                      </table>
+
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+            <?php
+
+
+        }
+        else {
+          header('location: anys.php');
+        }
+        ?>
+
+
+        <?php
 
         include $tpl . 'footer.php';
       }

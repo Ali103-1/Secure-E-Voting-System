@@ -1,6 +1,6 @@
 
 <?php
-// صفحة ادخال بيانات تسجيل حساب جديد 
+// صفحة ادخال بيانات تسجيل حساب جديد
     include 'connect.php';
 
     if ($_SERVER['REQUEST_METHOD'] == 'POST')
@@ -25,7 +25,24 @@
   {
     $formErrors[] = 'username is required';
   }
+$stmt = $conn->prepare("SELECT * FROM users WHERE email = ? ");
+$stmt->execute(array($email));
+$data2 = $stmt->rowCount();
 
+if ($data2 > 0)
+{
+  $formErrors[] = 'email is already registered ';
+
+}
+$stmt = $conn->prepare("SELECT * FROM users WHERE username=  ? ");
+$stmt->execute(array($username));
+$d = $stmt->rowCount();
+
+if ($d > 0)
+{
+  $formErrors[] = 'please select another username ';
+
+}
 
 
     if (empty($pass))

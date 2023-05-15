@@ -116,7 +116,7 @@ $lg = $stmt->fetch();
             }
            ?>
           <li class="nav-item">
-            <a class="nav-link" href="webpage.php?page=faq">Faq's</a>
+            <a class="nav-link" href="webpage.php?page=faq">FAQs</a>
           </li>
           <li class="nav-item">
             <a class="nav-link"  href="#contactuspage">contact us</a>
@@ -186,7 +186,7 @@ $lg = $stmt->fetch();
     <h5 style="color:white;text-align:left;color:rgba(0,0,0,.6)">welcome to</h5> </h5>
                        <h1>Secure e-Voting system
     </h1>
-                       <p style="margin:20px 0 !important;margin-right:80px !important">In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or
+                       <p style="margin:20px 0 !important;margin-right:80px !important">Vote with confidence using our Secure E-voting system.
         </p>
         <a href="#services">get started</a>
 

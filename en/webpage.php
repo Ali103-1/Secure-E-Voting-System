@@ -874,7 +874,7 @@ ob_start();
                               </ul>
                             </div>
                             <div class="col-md-8 order-2 order-md-1 align-self-center p-static">
-                              <h1>profile</h1>
+                              <h1>Profile</h1>
 
                             </div>
                           </div>
@@ -899,36 +899,36 @@ ob_start();
 
 
           <div class="form-group col-md-6">
-            <label for="">email address</label>
+            <label for="">Email Address</label>
             <input type="email" name="email" class="form-control"  required  value="<?php  echo $userInfo['email'] ?>">
           </div>
           <div class="form-group col-md-6">
-            <label for="">username</label>
+            <label for="">Username</label>
             <input type="text" name="username" class="form-control"  required  value="<?php  echo $userInfo['username'] ?>" >
           </div>
         <input type="hidden" name="id" value="<?php echo $userInfo['id'] ?>">
           <div class="form-group col-md-6">
-            <label for="">confirm new password  </label>
+            <label for="">Confirm New Password  </label>
             <input type="password" name="cpassword" class="form-control"   >
           </div>
           <div class="form-group col-md-6">
-            <label for="inputPassword4">new password</label>
+            <label for="inputPassword4">New Password</label>
             <input type="password" name="password" class="form-control"  >
           </div>
 
                 <div class="form-group col-md-6">
-                  <label for="">phone</label>
+                  <label for="">Phone</label>
                   <input type="text" name="phone" class="form-control"  required  value="<?php  echo $userInfo['phone'] ?>">
                 </div>
 
 
           <div class="form-group col-md-6">
-            <label for="">age</label>
+            <label for="">Age</label>
             <input type="text" name="age" class="form-control"  required  value="<?php  echo $userInfo['age'] ?>">
 
           </div>
           <div class="form-group col-md-12">
-            <label for="">location adress</label>
+            <label for="">Location Adress</label>
 
             <input type="text" name="adress" class="form-control col-md-12" placeholder="location " value="<?php  echo $userInfo['adress'] ?>" autocomplete="off" required="required">
           </div>

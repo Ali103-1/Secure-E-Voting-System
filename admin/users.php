@@ -314,7 +314,7 @@
                           <input type="password" name="npassword" placeholder="" class="form-control">
                         </div>
                         <div class="col-6">
-                          <label for="cpassword">confirm password</label>
+                          <label for="cpassword">Confirm Password</label>
                           <input type="password" name="cpassword" placeholder="" class="form-control">
                         </div>
 

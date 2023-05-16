@@ -35,7 +35,7 @@
 
             <div class="col-md-6">
               <div class="left-header management-header">
-                <h1>condidate managements list</h1>
+                <h1>Candidate Managements List</h1>
               </div>
             </div>
             <div class="col-md-6">
@@ -61,9 +61,9 @@
                   <table class="table" id="condidate-table" style="margin-top:60px">
                     <thead>
                       <tr>
-                        <th scope="col">condidate id</th>
-                        <th scope="col">condidate name</th>
-                        <th scope="col">condidate image</th>
+                        <th scope="col">Candidate id</th>
+                        <th scope="col">Candidate name</th>
+                        <th scope="col">Candidate image</th>
                         <th scope="col">total votes </th>
 
                         <th scope="col">election </th>

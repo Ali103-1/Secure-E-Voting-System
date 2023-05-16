@@ -122,7 +122,7 @@ $lg = $stmt->fetch();
             <a class="nav-link"  href="#contactuspage">contact us</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link"  href="home">secure</a>
+            <!-- <a class="nav-link"  href="home">secure</a> -->
           </li>
 
           <li class="nav-item">
@@ -183,7 +183,7 @@ $lg = $stmt->fetch();
                 <div class="hdcotnt">
                   <h5 style="text-align:left">
                      <img src="<?php echo $images ?>grid2.png" style="margin-left:60px;margin-bottom: -30px;width:15% ! important;height:auto !important" >
-    <h5 style="color:white;text-align:left;color:rgba(0,0,0,.6)">welcome to</h5> </h5>
+    <h5 style="color:white;text-align:left;color:rgba(0,0,0,.6)">Welcome To</h5> </h5>
                        <h1>Secure e-Voting system
     </h1>
                        <p style="margin:20px 0 !important;margin-right:80px !important">Vote with confidence using our Secure E-voting system.

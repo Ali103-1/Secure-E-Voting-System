@@ -134,7 +134,7 @@
           </svg>
 
 
-          <span class="link-name">condidate</span>
+          <span class="link-name">Candidate</span>
         </a>
       </li>
       <li>

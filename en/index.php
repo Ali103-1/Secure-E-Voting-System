@@ -66,7 +66,17 @@ $lg = $stmt->fetch();
                    <h1>Secure system
                    </h1>
 
-      
+      <p>Security is fundamental in all fields and at all times and places. Also, its importance is
+increasing with systems related to critical decisions. One aspect of security is Cybersecurity which revolves around protecting information systems from unauthorized access
+and encrypting data. Also, many more technologies are used in this field to achieve CIA
+(confidentiality, integrity, and availability). The system is centered on developing secure electronic voting and to understand this system a look at its history is mandatory.
+Paper-based voting was one of the earliest methods for voting but it was having major
+issues such as the lack of mobility, large number of papers, and the difficulty of storing
+and preserving them. This is solved by using E-voting systems but these systems need to
+ensure verification and integrity to reach their potential. Otherwise, it will be vulnerable
+to fraud and lack of verification leading to unreliable and unfair systems. Therefore, a
+secure E-voting system is capable of solving integrity, verification problems and ease the
+process of voting.</p>
       
 
             </div>

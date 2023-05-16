@@ -24,7 +24,7 @@ ob_start();
 
                   <form class="#" action="account.php?account=login" method="post">
 
-                    <h1>login page</h1>
+                    <h1>Login Page</h1>
 
 
                     <div class="form-group">
@@ -72,7 +72,7 @@ ob_start();
                     }
                      ?>
                     <div class="new-acc">
-                      <a href="account.php?page=register" class="new-acc">create new account</a>
+                      <a href="account.php?page=register" class="new-acc">Create New Account</a>
                     </div>
                   </form>
                 </div>
@@ -105,32 +105,32 @@ ob_start();
 
 
                     </div>
-                    <h1>create new account</h1>
+                    <h1>Create New Account</h1>
                     <div class="row">
                       <div class="col-6">
-                        <label for="username">email adress</label>
+                        <label for="username">Email Adress</label>
                         <input type="text" name="email" id="username" placeholder="" class="form-control">
                       </div>
                       <div class="col-6">
-                        <label for="username">username</label>
+                        <label for="username">Username</label>
                         <input type="text" name="username" id="username" placeholder="" class="form-control">
                       </div>
                       <div class="col-6">
-                        <label for="username">age</label>
+                        <label for="username">Age</label>
                         <input type="text" name="age" id="username" placeholder="" class="form-control">
                       </div>
 
                       <div class="col-6">
-                        <label for="username">phone</label>
+                        <label for="username">Phone</label>
                         <input type="text" name="phone" id="username" placeholder="" class="form-control">
                       </div>
 
                       <div class="col-6">
-                        <label for="password">password </label>
+                        <label for="password">Password </label>
                         <input type="password" name="npassword" placeholder="" class="form-control">
                       </div>
                       <div class="col-6">
-                        <label for="cpassword">confirm password</label>
+                        <label for="cpassword">Confirm Password</label>
                         <input type="password" name="cpassword" placeholder="" class="form-control">
                       </div>
 
@@ -147,7 +147,7 @@ ob_start();
 
                     </div>
                     <div class="new-acc">
-                      <a href="account.php?page=login" class="ald-acc new-acc">already have account</a>
+                      <a href="account.php?page=login" class="ald-acc new-acc">Already Have Account</a>
                     </div>
                   </form>
                 </div>

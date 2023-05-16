@@ -112,7 +112,7 @@ $stmt->execute();
 $no = $stmt->rowCount();
  ?>
                     <span class="nbr"><?php echo $no ?></span>
-                                        <p> condidate</p>
+                                        <p> Candidate</p>
                   </div>
                 </div>
 
